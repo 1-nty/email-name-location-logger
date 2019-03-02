@@ -1,0 +1,23 @@
+<!doctype HTML>
+<style>
+  h1{
+  color:White;
+  font-family: 'Open Sans', sans-serif;;
+}
+</style>
+<input type="email" name="email" id="email" placeholder="email" />
+<input type="name" placeholder="name" id="name"/>
+<h1>Hello!</h1>
+<button  
+  onclick='logIt()'
+  style="height:70px;width:350px"
+>Log It!</button>
+<script>
+  function logIt(){
+    var email = document.getElementById('email').value
+    var name = document.getElementById('name').value
+    console.log(name+' '+email)
+    
+  }
+  
+</script>
