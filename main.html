@@ -2,22 +2,28 @@
 <style>
   h1{
   color:White;
-  font-family: 'Open Sans', sans-serif;;
-}
+  font-family: 'Open Sans', sans-serif; 
+  }
 </style>
-<input type="email" name="email" id="email" placeholder="email" />
+<!-- SETT UP A FORM WITH INPUTS ---->
+<!-- LEARN MORE HERE https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/submit -->
+<form>
+<h1 id="h1">Hello!</h1>
+<input type="email" id="email" placeholder="email" required="True"/>
 <input type="name" placeholder="name" id="name"/>
-<h1>Hello!</h1>
+
 <button  
   onclick='logIt()'
   style="height:70px;width:350px"
+  type = sub
 >Log It!</button>
+</form>
+
 <script>
   function logIt(){
-    var email = document.getElementById('email').value
-    var name = document.getElementById('name').value
-    console.log(name+' '+email)
+    var emailInput = document.getElementById('email').value
+    var nameInput = document.getElementById('name').value
+    document.getElementById("h1").innerHTML = nameInput+' '+emailInput
     
   }
-  
 </script>
