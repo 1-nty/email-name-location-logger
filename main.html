@@ -39,11 +39,13 @@
   function msg(){
     navigator.geolocation.getCurrentPosition(showPosition)
   }
-var x = document.getElementById("demo")
-function showPosition(position) {
-  x.innerHTML = "Latitude: " + position.coords.latitude + 
-  "<br>Longitude: " + position.coords.longitude; 
-}
+  function showPosition(position) {
+    var location = {lat:position.coords.latitude,lon:position.coords.longitude};
+    console.log(location)
+  // works!
+  
+  }
+
 </script>
 
 
