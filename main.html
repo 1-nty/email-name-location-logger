@@ -27,3 +27,23 @@
     
   }
 </script>
+
+<!---  TRYED TO FIND LOCATION WITH THIS --->
+<!-- input help https://www.w3schools.com/tags/att_input_type.asp -->
+
+
+
+<p id="demo"></p>
+<input type="button" value="Click me" onclick="msg()">
+<script>
+  function msg(){
+    navigator.geolocation.getCurrentPosition(showPosition)
+  }
+var x = document.getElementById("demo")
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude; 
+}
+</script>
+
+
